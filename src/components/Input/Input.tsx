@@ -1,0 +1,29 @@
+import classNames from "classnames";
+
+/** Пропсы, которые принимает компонент Input */
+export type InputProps = Omit<
+    React.InputHTMLAttributes<HTMLInputElement>,
+    'onChange'
+> & {
+    /** Значение поля */
+    value: string;
+    /** Callback, вызываемый при вводе данных в поле */
+    onChange: (value: string) => void;
+};
+
+export const Input: React.FC<InputProps> = ({ value, onChange, ...props }) => {
+    const className = classNames({ 'input_disabled': props.disabled == true }, props.className);
+
+    const handleChange = (event: any) => {
+        let value = event.target.value;
+        onChange(value);
+    }
+
+    return <input
+        {...props}
+        value={value}
+        type="text"
+        className={className}
+        onChange={handleChange}
+    />
+};
