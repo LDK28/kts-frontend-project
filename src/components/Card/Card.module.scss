@@ -4,28 +4,28 @@
         width: 394px;
         margin: 20px;
 
-        &-img {
+        &_img {
             max-height: 360px;
         }
 
-        &-category {
+        &_category {
             font-size: 18px;
             margin-bottom: 14px;
 
         }
 
-        &-title {
+        &_title {
             font-size: 26px;
             margin-bottom: 6px;
         }
 
-        &-subtitle {
+        &_subtitle {
             font-size: 18px;
             margin-bottom: 18px;
 
         }
 
-        &-content {
+        &_content {
             font-size: 24px;
         }
     }
@@ -37,28 +37,28 @@
         width: 156px;
         margin: 7px;
 
-        &-img {
+        &_img {
             max-height: 130px;
         }
 
-        &-category {
+        &_category {
             font-size: 12px;
             margin-bottom: 14px;
 
         }
 
-        &-title {
+        &_title {
             font-size: 14px;
             margin-bottom: 6px;
         }
 
-        &-subtitle {
+        &_subtitle {
             font-size: 12px;
             margin-bottom: 18px;
 
         }
 
-        &-content {
+        &_content {
             font-size: 14px;
         }
     }
@@ -67,12 +67,12 @@
 .card {
     list-style-type: none;
 
-    &-img {
+    &_img {
         max-width: 100%;
         margin-bottom: 26px;
     }
 
-    &-category {
+    &_category {
         width: 100%;
 
         font-family: 'Eudoxus Sans';
@@ -83,7 +83,7 @@
         color: #AFADB5;
     }
 
-    &-title {
+    &_title {
         width: 100%;
 
         font-family: 'Eudoxus Sans';
@@ -96,7 +96,7 @@
         color: #151411;
     }
 
-    &-subtitle {
+    &_subtitle {
         width: 100%;
 
         font-family: 'Eudoxus Sans';
@@ -107,7 +107,7 @@
         color: #AFADB5;
     }
 
-    &-content {
+    &_content {
         box-sizing: border-box;
         width: 100%;
         font-family: 'Eudoxus Sans';

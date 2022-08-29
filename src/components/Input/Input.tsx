@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import './Input.scss'
+import styles from './Input.module.scss';
 
 /** Пропсы, которые принимает компонент Input */
 export type InputProps = Omit<
@@ -13,7 +13,7 @@ export type InputProps = Omit<
 };
 
 export const Input: React.FC<InputProps> = ({ value, onChange, ...props }) => {
-    const className = classNames({ 'input_disabled': props.disabled == true }, props.className, 'input');
+    const className = classNames({ 'input_disabled': props.disabled == true }, props.className, 'input', `${styles.input}`);
 
     const handleChange = (event: any) => {
         let value = event.target.value;

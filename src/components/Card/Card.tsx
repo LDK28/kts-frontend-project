@@ -1,4 +1,4 @@
-import './Card.scss'
+import styles from './Card.module.scss'
 
 /** Пропсы, которые принимает компонент Card */
 export type CardProps = {
@@ -18,23 +18,23 @@ export type CardProps = {
 
 export const Card: React.FC<CardProps> = ({ image, categoty, title, subtitle, content, onClick }) => {
 
-    return <li onClick={onClick} className="card">
+    return <li onClick={onClick} className={`${styles.card}`}>
 
-        <img src={image} alt="" className="card-img" />
+        <img src={image} alt="" className={`${styles.card_img}`} />
 
-        {categoty && <div className="card-category">
+        {categoty && <div className={`${styles.card_category}`}>
             {categoty}
         </div>}
 
-        <div className="card-title">
+        <div className={`${styles.card_title}`}>
             {title}
         </div>
 
-        <div className="card-subtitle">
+        <div className={`${styles.card_subtitle}`}>
             {subtitle}
         </div>
 
-        {content && <div className="card-content">
+        {content && <div className={`${styles.card_content}`}>
             {content}
         </div>}
     </li>;

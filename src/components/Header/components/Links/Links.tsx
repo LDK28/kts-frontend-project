@@ -1,13 +1,13 @@
-import './Links.scss';
+import styles from './Links.module.scss';
 
 import { Link } from 'react-router-dom';
 
 export const Links = () => {
-    return <div className='links'>
-        <Link to={'/'} className="link">Product</Link>
-        <Link to={'/'} className="link">Services</Link>
-        <Link to={'/'} className="link">Article</Link>
-        <Link to={'/'} className="link">About us</Link>
+    return <div className={`${styles.links}`}>
+        <Link to={'/'} className={`${styles.link}`}>Product</Link>
+        <Link to={'/'} className={`${styles.link}`}>Services</Link>
+        <Link to={'/'} className={`${styles.link}`}>Article</Link>
+        <Link to={'/'} className={`${styles.link}`}>About us</Link>
     </div>
 }
 

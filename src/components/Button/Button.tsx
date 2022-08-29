@@ -1,6 +1,7 @@
 import classNames from "classnames";
 import { WithLoader } from "../WithLoader/WithLoader";
-import './Button.scss'
+
+import styles from "./Button.module.scss"
 
 /** Возможные раскраски кнопки */
 export enum ButtonColor {
@@ -26,6 +27,7 @@ export const Button: React.FC<ButtonProps> = ({ loading = false, color = ButtonC
     props.disabled ||= loading;
 
     const className = classNames(
+        `${styles.button}`,
         'button',
         `button_color-${color}`,
         { 'button_disabled': props.disabled },

@@ -1,6 +1,6 @@
 import React from "react";
 import { Button } from "../Button/Button";
-import './MultiDropdown.scss';
+import styles from './MultiDropdown.module.scss';
 
 /** Вариант для выбора в фильтре */
 export type Option = {
@@ -51,8 +51,8 @@ export const MultiDropdown: React.FC<MultiDropdownProps> = ({ options, value, on
     const [isVisible, setIsVisible] = React.useState(false);
     const handleIsVisible = () => setIsVisible(!isVisible);
 
-    return <div className="multi-dropdown">
-        <button disabled={disabled} onClick={handleIsVisible} className="multi-dropdown-button">
+    return <div className={`${styles.multi_dropdown}`}>
+        <button disabled={disabled} onClick={handleIsVisible} className={`${styles.multi_dropdown_button}`}>
             {pluralizeOptions(value)}
         </button>
         {isVisible && !disabled &&

@@ -1,4 +1,3 @@
-import './App.scss';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import UIKit from './pages/UIKit';
 import ProductPage from './pages/ProductPage';
