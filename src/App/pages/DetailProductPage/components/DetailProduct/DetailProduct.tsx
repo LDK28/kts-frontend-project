@@ -7,9 +7,6 @@ import './DetailProduct.scss';
 export const DetailProduct = () => {
     const { product } = useContext(productContext);
 
-
-
-
     return (
         <div className='detail-product'>
             <img src={product.image} className='img' />
@@ -18,16 +15,16 @@ export const DetailProduct = () => {
                 <div className='category'>{product.category}</div>
                 <div className='color-title'>Color</div>
                 <div className='colors'>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
+                    <div className='colors-black'></div>
+                    <div className='colors-green'></div>
+                    <div className='colors-gold'></div>
+                    <div className='colors-gray'></div>
                 </div>
                 <div className='description'>{product.description}</div>
                 <div className='price'>{`$${product.price}`}</div>
                 <div className='buttons'>
-                    <Button>Buy Now</Button>
-                    <Button>Add to Chart</Button>
+                    <Button className='buy'>Buy Now</Button>
+                    <Button className='chart'>Add to Chart</Button>
                 </div>
             </div>
         </div>

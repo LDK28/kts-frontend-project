@@ -39,7 +39,7 @@ export const DetailProductPage = () => {
             <div>
                 <Header></Header>
                 <DetailProduct></DetailProduct>
-                <TotalProduct title={'Related Items'} isCount={false} category={product.category}></TotalProduct>
+                <TotalProduct title={'Related Items'} isCount={false} category={product.category} deletionItemId={id}></TotalProduct>
             </div>
         </Provider >
     );

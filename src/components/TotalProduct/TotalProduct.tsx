@@ -2,6 +2,8 @@ import './TotalProduct.scss';
 import { useContext } from 'react';
 import { Card } from '@components/Card/Card';
 import { ProductsContext } from '../../App/App';
+import { Link } from 'react-router-dom';
+import classNames from 'classnames';
 
 /** Пропсы, которые принимает компонент TotalProduct*/
 export type TotalProductProps = {
@@ -13,17 +15,15 @@ export type TotalProductProps = {
     category?: string;
     /** Количество выводимых карт */
     count?: number;
+    deletionItemId?: number
 };
 
-export const TotalProduct: React.FC<TotalProductProps> = ({ title, isCount = true, category = '' }) => {
-    const productsContext = useContext(ProductsContext);
-    let products = new Array();
+export const TotalProduct: React.FC<TotalProductProps> = ({ title, isCount = true, category = '', deletionItemId = -1 }) => {
+    let products = useContext(ProductsContext).products;
 
     if (category.length > 0) {
-        products = productsContext.products.filter((product) => product.category == category)
+        products = products.filter((product) => product.category == category && product.id != deletionItemId)
     }
-
-    console.log(products);
 
     return (
         <div className='total-product'>
@@ -31,17 +31,19 @@ export const TotalProduct: React.FC<TotalProductProps> = ({ title, isCount = tru
                 <div className='title'>
                     {title}
                 </div>
-                {isCount && <div className='count'>{productsContext.products.length}</div>}
+                {isCount && <div className='count'>{products.length}</div>}
             </div>
 
             <div className='products-container'>
                 {products.map(product =>
-                    <Card
-                        image={product.image}
-                        categoty={product.category}
-                        title={product.title}
-                        subtitle={product.description}
-                        content={product.price}></Card>)}
+                    <Link to={`/product/${product.id}`} className="product">
+                        <Card
+                            image={product.image}
+                            categoty={product.category}
+                            title={product.title}
+                            subtitle={product.description}
+                            content={product.price}></Card>
+                    </Link>)}
             </div>
 
         </div>
