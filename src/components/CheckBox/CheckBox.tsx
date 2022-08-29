@@ -1,4 +1,4 @@
-import { useState } from "react";
+import './CheckBox.scss';
 
 /** Пропсы, которые принимает компонент CheckBox */
 export type CheckBoxProps = Omit<
@@ -16,5 +16,7 @@ export const CheckBox: React.FC<CheckBoxProps> = ({ onChange, ...props }) => {
         onChange(value);
     }
 
-    return <input type='checkbox' {...props} onChange={handleChange} />
+    return <input type='checkbox' {...props} onChange={handleChange} className="checkbox" />
 };
+
+export default CheckBox;

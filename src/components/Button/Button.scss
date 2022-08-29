@@ -1,7 +1,22 @@
+/*Стили только для десктопов*/
+@media screen and (min-width:800px) {
+    .button {
+        font-size: 18px;
+        width: 138px;
+        height: 54px;
+    }
+}
+
+/*Стили только для смартфонов и планшетов*/
+@media screen and (max-device-width:799px) {
+    .button {
+        font-size: 14px;
+        width: 100px;
+        height: 38px;
+    }
+}
+
 .button {
-    position: absolute;
-    width: 138px;
-    height: 54px;
     border: none;
     box-shadow: none;
 
@@ -10,9 +25,6 @@
     background: #518581;
 
     &:hover {
-        position: absolute;
-        width: 138px;
-        height: 54px;
         border: none;
         box-shadow: none;
 
@@ -31,7 +43,6 @@
     font-family: 'Eudoxus Sans';
     font-style: normal;
     font-weight: 700;
-    font-size: 18px;
     line-height: 130%;
     /* or 23px */
 

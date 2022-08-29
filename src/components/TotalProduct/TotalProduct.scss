@@ -1,0 +1,87 @@
+/*Стили только для десктопов*/
+@media screen and (min-width:800px) {
+    .total-product {
+        .title-container {
+            margin-bottom: 50px;
+
+            .title {
+                font-size: 44px;
+            }
+
+            .count {
+                padding: 10px 16px;
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+/*Стили только для смартфонов и планшетов*/
+@media screen and (max-device-width:799px) {
+    .total-product {
+        .title-container {
+            margin-bottom: 20px;
+
+            .title {
+                font-size: 18px;
+            }
+
+            .count {
+                padding: 2px 10px;
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+.total-product {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+
+    .products-container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+
+    }
+
+    .title-container {
+        text-align: left;
+        margin: 0;
+        padding: 0;
+        position: relative;
+
+
+        .title {
+            display: inline;
+            font-family: 'Eudoxus Sans';
+            font-style: normal;
+            font-weight: 700;
+            line-height: 130%;
+
+            color: #151411;
+        }
+
+        .count {
+            display: inline-block;
+
+            margin-left: 10px;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+
+            background: #F9F9F9;
+            border-radius: 20px;
+
+            font-family: 'Eudoxus Sans';
+            font-style: normal;
+            font-weight: 700;
+            line-height: 130%;
+
+            color: #518581;
+
+        }
+    }
+
+}

@@ -1,4 +1,5 @@
 import classNames from "classnames";
+import './Input.scss'
 
 /** Пропсы, которые принимает компонент Input */
 export type InputProps = Omit<
@@ -12,7 +13,7 @@ export type InputProps = Omit<
 };
 
 export const Input: React.FC<InputProps> = ({ value, onChange, ...props }) => {
-    const className = classNames({ 'input_disabled': props.disabled == true }, props.className);
+    const className = classNames({ 'input_disabled': props.disabled == true }, props.className, 'input');
 
     const handleChange = (event: any) => {
         let value = event.target.value;
@@ -27,3 +28,5 @@ export const Input: React.FC<InputProps> = ({ value, onChange, ...props }) => {
         onChange={handleChange}
     />
 };
+
+export default Input;

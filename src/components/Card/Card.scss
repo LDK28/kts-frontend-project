@@ -1,96 +1,120 @@
-.card {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 0px;
-    gap: 26px;
+/*Стили только для десктопов*/
+@media screen and (min-width:1000px) {
+    .card {
+        width: 394px;
+        margin: 20px;
 
-    position: absolute;
-    width: 394px;
-    height: 544px;
+        &-img {
+            max-height: 360px;
+        }
+
+        &-category {
+            font-size: 18px;
+            margin-bottom: 14px;
+
+        }
+
+        &-title {
+            font-size: 26px;
+            margin-bottom: 6px;
+        }
+
+        &-subtitle {
+            font-size: 18px;
+            margin-bottom: 18px;
+
+        }
+
+        &-content {
+            font-size: 24px;
+        }
+    }
+}
+
+/*Стили только для смартфонов и планшетов*/
+@media screen and (max-device-width:999px) {
+    .card {
+        width: 156px;
+        margin: 7px;
+
+        &-img {
+            max-height: 130px;
+        }
+
+        &-category {
+            font-size: 12px;
+            margin-bottom: 14px;
+
+        }
+
+        &-title {
+            font-size: 14px;
+            margin-bottom: 6px;
+        }
+
+        &-subtitle {
+            font-size: 12px;
+            margin-bottom: 18px;
+
+        }
+
+        &-content {
+            font-size: 14px;
+        }
+    }
+}
+
+.card {
+    list-style-type: none;
 
     &-img {
-        width: 394px;
-        height: 360px;
-
-        /* Inside auto layout */
-
-        flex: none;
-        order: 0;
-        flex-grow: 0;
+        max-width: 100%;
+        margin-bottom: 26px;
     }
 
     &-category {
-        width: 47px;
-        height: 23px;
+        width: 100%;
 
         font-family: 'Eudoxus Sans';
         font-style: normal;
         font-weight: 700;
-        font-size: 18px;
         line-height: 130%;
 
         color: #AFADB5;
-
-        flex: none;
-        order: 0;
-        flex-grow: 0;
     }
 
     &-title {
-        width: 346px;
-        height: 34px;
-
-        /* Headings/H3+ - Bold 26 */
+        width: 100%;
 
         font-family: 'Eudoxus Sans';
         font-style: normal;
         font-weight: 700;
-        font-size: 26px;
         line-height: 130%;
-        /* identical to box height, or 34px */
 
         letter-spacing: 0.01em;
 
-        /* Text Color */
-
         color: #151411;
-
-
-        /* Inside auto layout */
-
-        flex: none;
-        order: 0;
-        flex-grow: 0;
     }
 
     &-subtitle {
-        width: 346px;
-        height: 32px;
+        width: 100%;
 
         font-family: 'Eudoxus Sans';
         font-style: normal;
         font-weight: 500;
-        font-size: 18px;
         line-height: 180%;
 
         color: #AFADB5;
-
-        flex: none;
-        order: 1;
-        flex-grow: 0;
     }
 
     &-content {
         box-sizing: border-box;
+        width: 100%;
+        font-family: 'Eudoxus Sans';
+        font-style: normal;
+        font-weight: 700;
+        line-height: 130%;
 
-        position: absolute;
-        width: 408px;
-        height: 58px;
-        left: 64px;
-        top: 599px;
-
-        border: 1px dashed #FFE6AE;
-        border-radius: 6px;
+        color: #151411;
     }
 }

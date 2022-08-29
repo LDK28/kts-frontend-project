@@ -1,0 +1,66 @@
+/*Стили только для десктопов*/
+@media screen and (min-width:800px) {
+    .detail-product {
+        padding-top: 220px;
+
+        .img {
+            max-width: 327px;
+            max-height: 327px;
+        }
+
+        .text {
+            margin-left: 50px;
+
+            .title {
+                font-size: 44px;
+
+            }
+        }
+    }
+}
+
+/*Стили только для смартфонов и планшетов*/
+@media screen and (max-device-width:799px) {
+    .detail-product {
+        padding-top: 170px;
+    }
+
+    .img {
+        max-width: 600px;
+        max-height: 600px;
+    }
+
+    .text {
+        .title {
+            font-size: 24px;
+
+        }
+    }
+}
+
+.detail-product {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+
+    .img {
+        display: inline;
+    }
+
+    .text {
+        display: inline;
+
+        .title {
+            width: 100%;
+            font-family: 'Eudoxus Sans';
+            font-style: normal;
+            font-weight: 700;
+            line-height: 130%;
+
+            color: #151411;
+        }
+    }
+}

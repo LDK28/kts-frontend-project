@@ -3,8 +3,15 @@ import './UIKit.scss'
 import Button from "@components/Button";
 import Loader from '@components/Loader';
 import { Card } from '@components/Card/Card';
+import { Input } from '@components/Input/Input';
+import { CheckBox } from '@components/CheckBox/CheckBox';
+import MultiDropdown from '@components/MultiDropdown';
+import { Option } from '@components/MultiDropdown/MultiDropdown';
+import { useState } from 'react';
 
 const UIKit = () => {
+    const [value, setValue] = useState('Search property');
+
     return (
         <div className="window">
             <div className="window-button">
@@ -43,7 +50,7 @@ const UIKit = () => {
                     Инпут
                 </div>
                 <div>
-                    <Button className='button'>Find Now</Button>
+                    <Input value={value} onChange={(str: string) => setValue(str)} />
                 </div>
             </div>
 
@@ -52,7 +59,9 @@ const UIKit = () => {
                     Чекбокс
                 </div>
                 <div>
-                    <Button className='button'>Find Now</Button>
+                    <CheckBox onChange={function (value: boolean): void {
+                        throw new Error('Function not implemented.');
+                    }} />
                 </div>
             </div>
 
@@ -61,10 +70,16 @@ const UIKit = () => {
                     МультиДропдаун
                 </div>
                 <div>
-                    <Button className='button'>Find Now</Button>
+                    <MultiDropdown
+                        options={[]}
+                        value={[]}
+                        onChange={function (value: Option[]): void {
+                            throw new Error('Function not implemented.');
+                        }}
+                        pluralizeOptions={() => "Category"} />
                 </div>
             </div>
-        </div>
+        </div >
     );
 }
 

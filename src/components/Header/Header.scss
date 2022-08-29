@@ -1,0 +1,26 @@
+/*Стили только для десктопов*/
+@media screen and (min-width:800px) {
+    .header {
+        height: 120px;
+    }
+}
+
+/*Стили только для смартфонов и планшетов*/
+@media screen and (max-device-width:799px) {
+    .header {
+        height: 72px;
+    }
+}
+
+.header {
+    position: fixed;
+    width: 100%;
+
+    text-align: center;
+
+    background: #FFFFFF;
+
+    border-bottom: 2px solid #F3F3F3;
+
+    z-index: 1;
+}

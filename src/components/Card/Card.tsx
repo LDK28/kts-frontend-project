@@ -19,16 +19,21 @@ export type CardProps = {
 export const Card: React.FC<CardProps> = ({ image, categoty, title, subtitle, content, onClick }) => {
 
     return <li onClick={onClick} className="card">
+
         <img src={image} alt="" className="card-img" />
-        {categoty && <div className="card-categoty">
+
+        {categoty && <div className="card-category">
             {categoty}
         </div>}
+
         <div className="card-title">
             {title}
         </div>
+
         <div className="card-subtitle">
             {subtitle}
         </div>
+
         {content && <div className="card-content">
             {content}
         </div>}

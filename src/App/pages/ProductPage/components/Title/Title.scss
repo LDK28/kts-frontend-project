@@ -1,0 +1,58 @@
+/*Стили только для десктопов*/
+@media screen and (min-width:800px) {
+    .title-container {
+        padding-top: 220px;
+
+        .title {
+            font-size: 64px;
+        }
+
+        .subtitle {
+            font-size: 18px;
+        }
+    }
+}
+
+/*Стили только для смартфонов и планшетов*/
+@media screen and (max-device-width:799px) {
+    .title-container {
+        padding-top: 170px;
+
+        .title {
+            font-size: 26px;
+        }
+
+        .subtitle {
+            font-size: 14px;
+        }
+    }
+}
+
+.title-container {
+    text-align: center;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+
+    .title {
+        font-family: 'Eudoxus Sans';
+        font-style: normal;
+        font-weight: 700;
+        line-height: 130%;
+
+        color: #151411;
+
+        margin-bottom: 20px;
+    }
+
+    .subtitle {
+        font-family: 'Eudoxus Sans';
+        font-style: normal;
+        font-weight: 500;
+        line-height: 180%;
+
+        color: #AFADB5;
+    }
+
+    margin-bottom: 80px;
+}
