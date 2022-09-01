@@ -3,7 +3,6 @@ import { useContext } from 'react';
 import { Card } from '@components/Card/Card';
 import { ProductsContext } from '../../App/App';
 import { Link } from 'react-router-dom';
-import classNames from 'classnames';
 
 /** Пропсы, которые принимает компонент TotalProduct*/
 export type TotalProductProps = {
@@ -42,7 +41,8 @@ export const TotalProduct: React.FC<TotalProductProps> = ({ title, isCount = tru
                             categoty={product.category}
                             title={product.title}
                             subtitle={product.description}
-                            content={product.price}></Card>
+                            content={product.price}
+                            key={product.id}></Card>
                     </Link>)}
             </div>
 

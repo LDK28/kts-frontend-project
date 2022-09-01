@@ -4,16 +4,19 @@ import ProductPage from './pages/ProductPage';
 import { createContext, useEffect, useState } from 'react';
 import axios from 'axios';
 import DetailProductPage from './pages/DetailProductPage';
+import ProductType from 'src/types/ProductType';
+import React from 'react';
 
-export const ProductsContext = createContext({
-    products: new Array()
+const prods: ProductType[] = new Array();
+export const ProductsContext = createContext<{ products: ProductType[] }>({
+    products: prods
 });
 
 const Provider = ProductsContext.Provider;
 
 function App() {
 
-    const [products, setProducts] = useState<any[]>([]);
+    const [products, setProducts] = useState<ProductType[]>([]);
 
     useEffect(() => {
         const fetch = async () => {
@@ -21,14 +24,7 @@ function App() {
                 method: 'get',
                 url: 'https://fakestoreapi.com/products'
             })
-            setProducts(result.data.map((raw: {
-                id: any;
-                image: string;
-                category: string;
-                title: string;
-                description: string;
-                price: string;
-            }) => ({
+            setProducts(result.data.map((raw: ProductType) => ({
                 id: raw.id,
                 image: raw.image,
                 category: raw.category,
@@ -36,11 +32,9 @@ function App() {
                 description: raw.description,
                 price: `$${raw.price}`
             })));
-
-
+            console.log("Data got!");
         }
         fetch();
-
     }, []);
 
     return (

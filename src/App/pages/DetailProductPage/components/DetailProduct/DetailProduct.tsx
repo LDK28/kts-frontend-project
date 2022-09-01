@@ -1,11 +1,11 @@
 import Button from '@components/Button';
-import { Card } from '@components/Card/Card';
 import { useContext } from 'react';
+import ProductType from 'src/types/ProductType';
 import { productContext } from '../../DetailProductPage';
 import './DetailProduct.scss';
 
 export const DetailProduct = () => {
-    const { product } = useContext(productContext);
+    const product = useContext<ProductType>(productContext);
 
     return (
         <div className='detail-product'>

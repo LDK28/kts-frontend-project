@@ -7,8 +7,15 @@
         "prettier"
     ],
     "rules": {
+        "quotes": [
+            "error",
+            "double",
+            {
+                "avoidEscape": true
+            }
+        ],
         "no-console": "error",
-        // "prettier/prettier": "error",
+        "prettier/prettier": "error",
         "import/order": [
             "error",
             {

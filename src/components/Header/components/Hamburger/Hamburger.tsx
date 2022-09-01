@@ -4,7 +4,7 @@ export const Hamburger = () => {
     return (
         <div className={`${styles.hamburger_menu}`}>
             <input id={`${styles.menu__toggle}`} type="checkbox" />
-            <label className={`${styles.menu__btn}`} for={`${styles.menu__toggle}`}>
+            <label className={`${styles.menu__btn}`} htmlFor={`${styles.menu__toggle}`}>
                 <span></span>
             </label>
             <ul className={`${styles.menu__box}`}>

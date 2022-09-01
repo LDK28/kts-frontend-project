@@ -39,3 +39,5 @@ export const Card: React.FC<CardProps> = ({ image, categoty, title, subtitle, co
         </div>}
     </li>;
 };
+
+export default Card;
