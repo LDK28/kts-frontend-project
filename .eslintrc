@@ -7,15 +7,16 @@
         "prettier"
     ],
     "rules": {
-        "quotes": [
+        "no-console": "error",
+        "prettier/prettier": [
             "error",
-            "double",
             {
-                "avoidEscape": true
+                "tabWidth": 4,
+                "endOfLine": "auto",
+                "jsxSingleQuote": true,
+                "singleQuote": true
             }
         ],
-        "no-console": "error",
-        "prettier/prettier": "error",
         "import/order": [
             "error",
             {
