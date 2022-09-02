@@ -1,4 +1,4 @@
-import styles from './Card.module.scss'
+import styles from './Card.module.scss';
 
 /** Пропсы, которые принимает компонент Card */
 export type CardProps = {
@@ -16,28 +16,31 @@ export type CardProps = {
     onClick?: React.MouseEventHandler;
 };
 
-export const Card: React.FC<CardProps> = ({ image, categoty, title, subtitle, content, onClick }) => {
+export const Card: React.FC<CardProps> = ({
+    image,
+    categoty,
+    title,
+    subtitle,
+    content,
+    onClick,
+}) => {
+    return (
+        <li onClick={onClick} className={`${styles.card}`}>
+            <img src={image} className={`${styles.card_img}`} />
 
-    return <li onClick={onClick} className={`${styles.card}`}>
+            {categoty && (
+                <div className={`${styles.card_category}`}>{categoty}</div>
+            )}
 
-        <img src={image} alt="" className={`${styles.card_img}`} />
+            <div className={`${styles.card_title}`}>{title}</div>
 
-        {categoty && <div className={`${styles.card_category}`}>
-            {categoty}
-        </div>}
+            <div className={`${styles.card_subtitle}`}>{subtitle}</div>
 
-        <div className={`${styles.card_title}`}>
-            {title}
-        </div>
-
-        <div className={`${styles.card_subtitle}`}>
-            {subtitle}
-        </div>
-
-        {content && <div className={`${styles.card_content}`}>
-            {content}
-        </div>}
-    </li>;
+            {content && (
+                <div className={`${styles.card_content}`}>{content}</div>
+            )}
+        </li>
+    );
 };
 
 export default Card;

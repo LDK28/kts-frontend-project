@@ -15,7 +15,7 @@ export const ProductsContext = createContext<{ products: ProductType[] }>({
 
 const Provider = ProductsContext.Provider;
 
-function App() {
+const App = () => {
     const [products, setProducts] = useState<ProductType[]>([]);
 
     useEffect(() => {
@@ -52,6 +52,6 @@ function App() {
             </BrowserRouter>
         </Provider>
     );
-}
+};
 
 export default App;

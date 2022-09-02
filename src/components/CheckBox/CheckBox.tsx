@@ -10,13 +10,19 @@ export type CheckBoxProps = Omit<
 };
 
 export const CheckBox: React.FC<CheckBoxProps> = ({ onChange, ...props }) => {
-
     const handleChange = (event: any) => {
         const value: boolean = event.target.checked;
         onChange(value);
-    }
+    };
 
-    return <input type='checkbox' {...props} onChange={handleChange} className={`${styles.checkbox}`} />
+    return (
+        <input
+            type='checkbox'
+            {...props}
+            onChange={handleChange}
+            className={`${styles.checkbox}`}
+        />
+    );
 };
 
 export default CheckBox;
