@@ -1,0 +1,261 @@
+/*Стили только для десктопов*/
+@media screen and (min-width:800px) {
+    .detail-product {
+        padding-top: 220px;
+
+        .img {
+            max-width: 600px;
+            max-height: 600px;
+        }
+
+        .text {
+            margin-left: 50px;
+            width: 50%;
+
+
+            .title {
+                font-size: 44px;
+            }
+
+            .category {
+                font-size: 18px;
+            }
+
+            .color-title {
+                font-size: 18px;
+            }
+
+            .colors {
+                &-black {
+                    width: 50px;
+                    height: 50px;
+                }
+
+                &-green {
+                    width: 50px;
+                    height: 50px;
+                }
+
+                &-gold {
+                    width: 50px;
+                    height: 50px;
+                }
+
+                &-gray {
+                    width: 50px;
+                    height: 50px;
+                }
+            }
+
+            .description {
+                font-size: 18px;
+                margin-bottom: 50px;
+            }
+
+            .price {
+                font-size: 44px;
+                margin-bottom: 50px;
+            }
+
+            .buttons {
+                .buy {
+                    width: 47.5%;
+                    margin-right: 2.5%;
+
+                }
+            }
+
+            .chart {
+                width: 47.5%;
+                margin-left: 2.5%;
+
+            }
+
+        }
+    }
+}
+
+/*Стили только для смартфонов и планшетов*/
+@media screen and (max-device-width:799px) {
+    .detail-product {
+        padding-top: 170px;
+    }
+
+    .img {
+        max-width: 327px;
+        max-height: 327px;
+    }
+
+    .text {
+        .title {
+            font-size: 24px;
+            width: 100%;
+
+        }
+
+        .category {
+            font-size: 14px;
+        }
+
+        .color-title {
+            font-size: 14px;
+        }
+
+        .colors {
+            &-black {
+                width: 30px;
+                height: 30px;
+            }
+
+            &-green {
+                width: 30px;
+                height: 30px;
+            }
+
+            &-gold {
+                width: 30px;
+                height: 30px;
+            }
+
+            &-gray {
+                width: 30px;
+                height: 30px;
+            }
+        }
+
+        .description {
+            font-size: 14px;
+            margin-bottom: 30px;
+        }
+
+        .price {
+            font-size: 24px;
+            margin-bottom: 30px;
+        }
+
+        .buttons {
+            .buy {
+                width: 100%;
+                margin-bottom: 12px;
+            }
+        }
+
+        .chart {
+            width: 100%;
+        }
+    }
+}
+
+.detail-product {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 50px;
+
+
+    .img {
+        display: inline;
+    }
+
+    .text {
+
+        display: inline;
+        font-size: 18px;
+
+        font-family: 'Eudoxus Sans';
+        font-style: normal;
+        font-weight: 700;
+        line-height: 130%;
+
+        color: #151411;
+
+        margin-top: 32px;
+
+        .title {
+            font-family: 'Eudoxus Sans';
+            font-style: normal;
+            font-weight: 700;
+            line-height: 130%;
+
+            color: #151411;
+        }
+    }
+
+    .category {
+        font-family: 'Eudoxus Sans';
+        font-style: normal;
+        font-weight: 500;
+        line-height: 180%;
+
+        color: #AFADB5;
+    }
+
+    .color-title {
+        font-family: 'Eudoxus Sans';
+        font-style: normal;
+        font-weight: 700;
+        line-height: 130%;
+
+        color: #151411;
+    }
+
+    .colors {
+        display: flex;
+        margin-bottom: 20px;
+
+        &-black {
+            background-color: #151411;
+        }
+
+        &-green {
+            background-color: #314443;
+        }
+
+        &-gold {
+            background-color: #C5A26E;
+        }
+
+        &-gray {
+            background-color: #D8DBE0;
+        }
+    }
+
+    .description {
+        width: 100%;
+
+        font-family: 'Eudoxus Sans';
+        font-style: normal;
+        font-weight: 500;
+        line-height: 180%;
+        /* or 32px */
+
+
+        /* Paragraph Color */
+
+        color: #AFADB5;
+
+    }
+
+    .price {
+        font-family: 'Eudoxus Sans';
+        font-style: normal;
+        font-weight: 700;
+        line-height: 130%;
+
+        color: #151411;
+    }
+
+    .buttons {
+        display: flex;
+        flex-wrap: wrap;
+
+        .chart {
+            border: 1px solid #F3F3F3;
+            background-color: #FFFF;
+            color: #151411;
+        }
+    }
+}

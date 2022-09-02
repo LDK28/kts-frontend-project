@@ -1,6 +1,10 @@
 {
   "extends": "./tsconfig.paths.json",
   "compilerOptions": {
+    "typeRoots": [
+      "node_modules/@types",
+      "src/types"
+    ],
     "target": "es5",
     "lib": [
       "dom",

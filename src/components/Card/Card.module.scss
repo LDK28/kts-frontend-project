@@ -1,0 +1,124 @@
+/*Стили только для десктопов*/
+@media screen and (min-width:1000px) {
+    .card {
+        width: 394px;
+        margin: 20px;
+
+        &_img {
+            max-height: 360px;
+        }
+
+        &_category {
+            font-size: 18px;
+            margin-bottom: 14px;
+
+        }
+
+        &_title {
+            font-size: 26px;
+            margin-bottom: 6px;
+        }
+
+        &_subtitle {
+            font-size: 18px;
+            margin-bottom: 18px;
+
+        }
+
+        &_content {
+            font-size: 24px;
+        }
+    }
+}
+
+/*Стили только для смартфонов и планшетов*/
+@media screen and (max-device-width:999px) {
+    .card {
+        width: 156px;
+        margin: 7px;
+
+        &_img {
+            max-height: 130px;
+        }
+
+        &_category {
+            font-size: 12px;
+            margin-bottom: 14px;
+
+        }
+
+        &_title {
+            font-size: 14px;
+            margin-bottom: 6px;
+        }
+
+        &_subtitle {
+            font-size: 12px;
+            margin-bottom: 18px;
+
+        }
+
+        &_content {
+            font-size: 14px;
+        }
+    }
+}
+
+.card {
+    list-style-type: none;
+
+    &_img {
+        max-width: 100%;
+        margin-bottom: 26px;
+    }
+
+    &_category {
+        width: 100%;
+
+        font-family: 'Eudoxus Sans';
+        font-style: normal;
+        font-weight: 700;
+        line-height: 130%;
+
+        color: #AFADB5;
+    }
+
+    &_title {
+        width: 100%;
+
+        font-family: 'Eudoxus Sans';
+        font-style: normal;
+        font-weight: 700;
+        line-height: 130%;
+
+        letter-spacing: 0.01em;
+
+        color: #151411;
+    }
+
+    &_subtitle {
+        width: 100%;
+
+        font-family: 'Eudoxus Sans';
+        font-style: normal;
+        font-weight: 500;
+        line-height: 180%;
+
+        color: #AFADB5;
+
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    &_content {
+        box-sizing: border-box;
+        width: 100%;
+        font-family: 'Eudoxus Sans';
+        font-style: normal;
+        font-weight: 700;
+        line-height: 130%;
+
+        color: #151411;
+    }
+}

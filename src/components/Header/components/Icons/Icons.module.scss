@@ -1,0 +1,18 @@
+.icons {
+    background: #FFFFFF;
+    display: inline-block;
+
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    right: 10%;
+
+    .bag_img {
+        margin: 15px;
+    }
+
+    .user_img {
+        margin: 15px;
+    }
+}

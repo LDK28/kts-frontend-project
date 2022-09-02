@@ -1,0 +1,95 @@
+.window {
+    position: relative;
+    width: 100%;
+    height: 3258px;
+    background: #FFFFFF;
+    left: 50px;
+
+    .high-text {
+        position: static;
+        width: 286px;
+        height: 66px;
+
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 47px;
+        text-align: center;
+
+        color: #000000;
+    }
+
+    &-button {
+        position: absolute;
+        width: 980px;
+        height: 256px;
+        left: 0px;
+        top: 76px;
+
+        & .high-text {
+            left: 0px;
+            top: 76px;
+        }
+    }
+
+    &-loader {
+        position: absolute;
+        width: 737px;
+        height: 301.26px;
+        left: 50px;
+        top: 433px;
+
+        & .high-text {
+            left: 0px;
+            top: 76px;
+        }
+    }
+
+    &-card {
+        position: absolute;
+        width: 1670px;
+        height: 648px;
+        left: 0px;
+        top: 835px;
+
+        & .high-text {
+            left: 0px;
+            top: 76px;
+        }
+    }
+
+    &-input {
+        position: absolute;
+        width: 1097.72px;
+        height: 303px;
+        left: 76px;
+        top: 1584px;
+
+        & .high-text {
+            left: 0px;
+            top: 76px;
+        }
+    }
+
+    &-checkbox {
+        position: absolute;
+        width: 1114.42px;
+        height: 260px;
+        left: 77px;
+        top: 1988px;
+
+        & .high-text {
+            left: 0px;
+            top: 76px;
+        }
+    }
+
+    &-multidropdown {
+        position: absolute;
+        width: 1105px;
+        height: 729px;
+        left: 31px;
+        top: 2329px;
+    }
+}

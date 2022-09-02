@@ -1,0 +1,53 @@
+/*Стили только для десктопов*/
+@media screen and (min-width:1000px) {
+    .search-container {
+        margin-bottom: 50px;
+
+        .input {
+            width: 70%;
+        }
+
+        .filter {
+            display: inline;
+
+        }
+    }
+}
+
+/*Стили только для смартфонов и планшетов*/
+@media screen and (max-device-width:999px) {
+    .search-container {
+        margin-bottom: 30px;
+
+        .input {
+            width: 80%;
+        }
+
+        .filter {
+            display: none;
+        }
+    }
+}
+
+.search-container {
+    position: relative;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+
+    .input {
+        position: relative;
+        display: inline-block;
+    }
+
+    .button {
+        position: absolute;
+        transform: translateX(-125%) translateY(-50%);
+        top: 50%;
+    }
+
+    .filter {
+        position: absolute;
+        transform: translateX(25%);
+    }
+}

@@ -1,0 +1,30 @@
+.links {
+    display: inline-flex;
+    height: 120px;
+    // transform: translate(50%, 0%);
+    // position: absolute;
+
+
+    .link {
+        margin: 40px 30px 0px 30px;
+
+        font-family: 'Eudoxus Sans';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 180%;
+        color: #151411;
+
+        text-decoration: none;
+
+        &:hover {
+            color: #518581;
+            border-bottom: 2px solid #518581;
+        }
+    }
+
+    .choosen_link {
+        color: #518581;
+        border-bottom: 2px solid #518581;
+    }
+}

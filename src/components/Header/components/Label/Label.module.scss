@@ -1,0 +1,68 @@
+/*Стили только для десктопов*/
+@media screen and (min-width:800px) {
+    .label {
+        .img {
+            width: 42px;
+            height: 42px;
+        }
+
+        .title {
+            font-size: 20px;
+
+        }
+    }
+}
+
+/*Стили только для смартфонов и планшетов*/
+@media screen and (max-device-width:799px) {
+    .label {
+        .img {
+            width: 32px;
+            height: 32px;
+        }
+
+        .title {
+            font-size: 16px;
+
+        }
+    }
+}
+
+.label {
+    background: #FFFFFF;
+
+    margin-right: none;
+    margin-left: 5%;
+    width: 130px;
+    display: block;
+
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+
+
+
+
+    .img {
+        display: inline;
+    }
+
+    .title {
+        display: inline;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+
+        font-family: 'Eudoxus Sans';
+        font-style: normal;
+        font-weight: 700;
+        line-height: 180%;
+
+        text-align: center;
+        text-decoration: none;
+
+
+        color: #151411;
+    }
+}

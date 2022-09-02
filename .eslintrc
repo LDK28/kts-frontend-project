@@ -8,7 +8,15 @@
     ],
     "rules": {
         "no-console": "error",
-        "prettier/prettier": "error",
+        "prettier/prettier": [
+            "error",
+            {
+                "tabWidth": 4,
+                "endOfLine": "auto",
+                "jsxSingleQuote": true,
+                "singleQuote": true
+            }
+        ],
         "import/order": [
             "error",
             {
